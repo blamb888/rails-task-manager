@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Tasks</h1>
+  <div class="cards">
+    <% @tasks.each do |task| %>
+      <%= render 'tasks/card', task: task %>
+      <!--<p><%= task.title %></p>-->
+    <% end %>
+  </div>
+  <div class="container my-3">
+    <%= link_to new_task_path do %>
+      <i class="fas fa-plus"></i> Add New Task
+    <% end %>
+  </div>
+</div>

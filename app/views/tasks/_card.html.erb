@@ -1,0 +1,16 @@
+
+<div class="card-product">
+  <img src="https://source.unsplash.com/featured/?household,chores" />
+  <div class="card-product-infos">
+    <h2><%= link_to  task.title, task_path(task) %></h2>
+    <div class="d-flex">
+      <p> <%= task.details %></p>
+    </div>
+      <% if task.completed %>
+        <i class="far fa-check-square"></i>
+      <% else %>
+        <i class="far fa-square"></i>
+      <% end %>
+      <%= link_to  "Edit", edit_task_path(task) %>
+  </div>
+</div>
